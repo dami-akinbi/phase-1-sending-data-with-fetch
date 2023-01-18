@@ -1,24 +1,65 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Sample Form</title>
     <style type="text/css" media="all">
+      body {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: cursive;
+      }
+      #container {
+        max-width: 400px;
+        margin: 2em auto auto auto;
+        background-color: royalblue;
+        padding: 1em;
+        border-radius: 0.5em;
+        text-align: center;
+        line-height: 3em;
+      }
       input[type="text"] {
-        margin: 1em 5em;
+        margin: 0.5em;
+        padding: 0.5em;
+        border-radius: 0.25em;
+      }
+      input[type="submit"] {
+        margin: 0.5em;
+        padding: 0.75em;
+        border-radius: 0.25em;
+        width: 69%;
+        font-weight: bold;
+      }
+      input[type="submit"]:hover {
+        background-color: rebeccapurple;
+        cursor: pointer;
+        color: white;
+      }
+      input[type="submit"]:active {
+        background-color: #a582c8;
+      }
+      label {
+        display: block;
+        margin-bottom: 1.5em;
       }
     </style>
   </head>
 
   <body>
-    <h1>Sample Form</h1>
-    <form action="http://localhost:3000/dogs" method="POST">
-      <label> Dog Name: <input type="text" name="dogName" id="dogName" /></label><br />
-      <label> Dog Breed: <input type="text" name="dogBreed" id="dogBreed" /></label><br />
-      <input type="submit" id="submit" value="Submit" />
-    </form>
+    <div id="container">
+      <h1>Sample Form</h1>
+      <form action="http://localhost:3000/dogs" method="POST">
+        <label
+          >Dog Name: <input type="text" name="dogName" id="dogName"
+        /></label>
 
+        <label>
+          Dog Breed: <input type="text" name="dogBreed" id="dogBreed"
+        /></label>
+
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </div>
   </body>
-
 </html>
