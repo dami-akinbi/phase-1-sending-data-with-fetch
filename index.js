@@ -8,7 +8,13 @@ function submitData(username, userEmail) {
     },
     body: JSON.stringify({ name: username, email: userEmail }),
   })
-    .then((resp) => resp.json())
-    .then((data) => data)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      console.log(data.id);
+
+      const p = document.querySelector("p");
+      p.textContent = `New ID: ${data.id}`;
+    })
     .catch((error) => console.log(error.message));
 }
