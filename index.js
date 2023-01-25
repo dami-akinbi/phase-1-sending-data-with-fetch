@@ -10,11 +10,9 @@ function submitData(username, userEmail) {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      console.log(data.id);
-
-      const p = document.querySelector("p");
-      p.textContent = `New ID: ${data.id}`;
+      document.body.innerHTML = data["id"];
     })
-    .catch((error) => console.log(error.message));
+    .catch((error) => {
+      document.body.innerHTML = error.message;
+    });
 }
